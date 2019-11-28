@@ -23,7 +23,7 @@ contract project{
     mapping (uint=>Component) public components;
     
     
-    function newComponent(uint id, uint floorNumber, uint batteryNumber, uint columnNumberPerBattery, uint elevatorNumberPerColumn, string memory choice) public {
+    function newOrder(uint id, uint floorNumber, uint batteryNumber, uint columnNumberPerBattery, uint elevatorNumberPerColumn, string memory choice) public {
        
         uint columnNumber = batteryNumber*columnNumberPerBattery;
         uint elevatorNumber = batteryNumber*columnNumberPerBattery*elevatorNumberPerColumn;
@@ -42,6 +42,10 @@ contract project{
         component.controlpanels = elevatorNumber;
         component.completed = true;
         component.range = choice;
+        
     } 
     
+    
+    
 }
+
