@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+</head>
+
+<body>
+
+<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/homePage_RocketElevatorsMainLogo.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES.:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li><!-- HOME -->
+										<a href="#">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+                                        <a href="#services">
+                                            SERVICES
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/residential.html">Residential Services</a></li>
+                                            <li><a href="/commercial.html">Commercial Services</a></li>
+                                            <li><a href="/quote.html">Get a Quote</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><!-- PORTFOLIO -->
+										<a href="#portfolio">
+											PORTFOLIO
+										</a>
+										<li><!-- SOUNDS -->
+										<a href="/sounds.html">
+											SOUNDS
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="/#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="/#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="/#contact">
+											CONTACT
+										</a>
+									</li>
+									<li><!-- INTERVENTIONS -->
+										<a href="/interventions.html">
+                                        INTERVENTIONS
+										</a>
+									</li>
+									<li>
+									<!-- Account -->
+								<% if current_user %>
+								<a href="">
+										<%= current_user.email %>
+									</a>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="">
+										  <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+									</a>
+								  </li>
+									<% if current_user.admin == true %>
+								  <li>
+									<a href="/admin">
+										DASHBOARD
+									</a>
+								  </li>
+								  <li>
+                                  <a href="/interventions.html">
+                                        INTERVENTIONS
+                                    </a>
+                                  </li>
+									<% end %>
+								<% else %>
+										<%= link_to 'ACCOUNT', new_user_session_path %>
+									<ul class="dropdown-menu">
+								  <li>
+								  <a href="">
+										<%= link_to 'SIGN IN', new_user_session_path %>
+								  </a>
+								  </li>
+						
+									<% end %>
+									</ul>
+								</li>
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+            <section id="interventionss">
+        <div class="container">
+
+            <div class="heading-title heading-dotted text-center">
+                <h1>Your Smart Contract</h1>
+            </div>
+
+    <script>
+
+
+        // window.onload = function () {
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(new Web3.providers.HttpProvider("http://34.228.157.165:8000"));
+        } else {
+            web3 = new Web3(new Web3.providers.HttpProvider("http://34.228.157.165:8000"));
+        }
+
+
+
+
+        var abi = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "floorNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "batteryNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "columnNumberPerBattery",
+				"type": "uint256"
+			},
+			{
+				"name": "elevatorNumberPerColumn",
+				"type": "uint256"
+			},
+			{
+				"name": "choice",
+				"type": "string"
+			}
+		],
+		"name": "newOrder",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "components",
+		"outputs": [
+			{
+				"name": "batteries",
+				"type": "uint256"
+			},
+			{
+				"name": "columns",
+				"type": "uint256"
+			},
+			{
+				"name": "cages",
+				"type": "uint256"
+			},
+			{
+				"name": "doors",
+				"type": "uint256"
+			},
+			{
+				"name": "buttons",
+				"type": "uint256"
+			},
+			{
+				"name": "displayPanels",
+				"type": "uint256"
+			},
+			{
+				"name": "cables",
+				"type": "uint256"
+			},
+			{
+				"name": "engines",
+				"type": "uint256"
+			},
+			{
+				"name": "extinguishers",
+				"type": "uint256"
+			},
+			{
+				"name": "lights",
+				"type": "uint256"
+			},
+			{
+				"name": "champagneFountain",
+				"type": "uint256"
+			},
+			{
+				"name": "controlpanels",
+				"type": "uint256"
+			},
+			{
+				"name": "completed",
+				"type": "bool"
+			},
+			{
+				"name": "range",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getComponentsLength",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "getHalfComponents",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "getOtherHalf",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+        var myContract = new web3.eth.Contract(abi, '0x2d549B54a8fB450ECcaca214db36E1F668B6837E')
+
+
+        async function Sarah() {
+            
+            var F = document.getElementById("floors").value
+            var B = document.getElementById("batteries").value
+            var C = document.getElementById("columns").value
+            var E = document.getElementById("elevators").value
+            var R = document.getElementById("range").value
+
+
+
+            var option = { from: '0xA01dca136e4A91a4f3Dc7a4d8c2B889757cF1561' };
+            myContract.methods.newOrder(F, B, C, E, R).send(option, function (error, result) {
+                if (!error){
+                    console.log(result);}
+                else{
+    
+                console.log(error);}
+            });
+
+            var option2 = { caller: '0xA01dca136e4A91a4f3Dc7a4d8c2B889757cF1561' };
+            var length = await myContract.methods.getComponentsLength().call(option2, function (error, result) {
+                if (!error){
+                    console.log(result);}
+                else{
+                console.log(error);}
+            });
+            var number = parseInt(length) + 1;
+            alert(`Transaction id ${number} successfully sent!`);
+            
+
+        }
+
+        async function Misa() {
+
+            var orderID = document.getElementById("orderId").value
+
+
+            var option2 = { caller: '0xA01dca136e4A91a4f3Dc7a4d8c2B889757cF1561' };
+            var halfComponent = await myContract.methods.getHalfComponents(orderID).call(option2, function (error, result) {
+                if (!error){
+                    console.log(result);
+                }
+                else{
+                    console.log("error2");
+                console.log(error);}
+            });
+
+            document.getElementById("batteriesNumber").value = halfComponent["0"]
+            document.getElementById("columnsNumber").value = halfComponent["1"]
+            document.getElementById("cagesNumber").value = halfComponent["2"]
+            document.getElementById("doorsNumber").value = halfComponent["3"]
+            document.getElementById("buttonsNumber").value = halfComponent["4"]
+            document.getElementById("displayPanelsNumber").value = halfComponent["5"]
+            document.getElementById("cablesNumber").value = halfComponent["6"]
+
+            var OtherHalf = await myContract.methods.getOtherHalf(orderID).call(option2, function (error, result) {
+                if (!error){
+                    console.log(result);}
+                else{
+                console.log(error);}
+            });
+
+            document.getElementById("engines").value = OtherHalf["0"]
+            document.getElementById("extinguishersNumber").value = OtherHalf["1"]
+            document.getElementById("lightsNumber").value = OtherHalf["2"]
+            document.getElementById("champagneNumber").value = OtherHalf["3"]
+            document.getElementById("controlpanels").value = OtherHalf["4"]
+            document.getElementById("rangeChoice").value = OtherHalf["5"]
+
+        }
+
+        async function putNumber(){
+            var option2 = { caller: '0xA01dca136e4A91a4f3Dc7a4d8c2B889757cF1561' };
+            document.getElementById("length").value = await myContract.methods.getComponentsLength().call(option2, function (error, result) {
+                if (!error){
+                    console.log(result);}
+                else{
+                console.log(error);}
+            });
+        }
+
+
+
+
+    </script>
+
+    <div class="container">
+        <h3 onclick="putNumber()">Transaction Number</h3>
+        <input id="length" type="text">
+
+        <br>
+        <h3>Project's Office</h3>
+
+        <label for="batteries" class="col-lg-3 control-label">Number of Batteries</label>
+        <input id="batteries" type="text">
+        <br>
+        <label for="floors" class="col-lg-3 control-label">Number of Floors</label>
+        <input id="floors" type="text">
+        <br>
+        <label for="columns" class="col-lg-3 control-label">Number of Columns per Battery</label>
+        <input id="columns" type="text">
+        <br>
+        <label for="elevators" class="col-lg-3 control-label">Number of Elevators per Column</label>
+        <input id="elevators" type="text">
+        <br>
+        <label for="range" class="col-lg-3 control-label">Range of Quality</label>
+        <input id="range" type="text">
+        <br>
+        <br>
+        <button id="button" onclick="Sarah()" class="btn btn-secondary">Submit</button>
+
+    </div>
+    <br>
+    <br>
+    <div id= "getHalf">
+    <h3>Get Order by Id</h3>
+    <label for="orderId" class="col-lg-3 control-label">Id of Order</label>
+        <input id="orderId" type="text">
+        <br>
+        <br>
+        <button id="button" onclick="Misa()" class="btn btn-secondary">Go!</button>
+
+        <label for="batteriesNumber" class="col-lg-3 control-label">Number of Batteries</label>
+        <input id="batteriesNumber" type="text">
+        <br>
+        <label for="columnsNumber" class="col-lg-3 control-label">Number of Columns</label>
+        <input id="columnsNumber" type="text">
+        <br>
+        <label for="cages" class="col-lg-3 control-label">Number of Cages</label>
+        <input id="cagesNumber" type="text">
+        <br>
+        <label for="doors" class="col-lg-3 control-label">Number of Doors</label>
+        <input id="doorsNumber" type="text">
+        <br>
+        <label for="buttons" class="col-lg-3 control-label">Number of Buttons</label>
+        <input id="buttonsNumber" type="text">
+        <br>
+        <label for="displayPanels" class="col-lg-3 control-label">Number of Display Panels</label>
+        <input id="displayPanelsNumber" type="text">
+        <br>
+        <label for="cables" class="col-lg-3 control-label">Number of Cables</label>
+        <input id="cablesNumber" type="text">
+        <br>
+        <label for="engines" class="col-lg-3 control-label">Number of Engines</label>
+        <input id="engines" type="text">
+        <br>
+        <label for="extinguishers" class="col-lg-3 control-label">Number of Extinguishers</label>
+        <input id="extinguishersNumber" type="text">
+        <br>
+        <label for="lights" class="col-lg-3 control-label">Number of Lights</label>
+        <input id="lightsNumber" type="text">
+        <br>
+        <label for="champagne" class="col-lg-3 control-label">Number of Champagne Fountain</label>
+        <input id="champagneNumber" type="text">
+        <br>
+        <label for="controlpanels" class="col-lg-3 control-label">Number of Control Panels</label>
+        <input id="controlpanels" type="text">
+        <br>
+        <label for="rangeChoice" class="col-lg-3 control-label">Choice of Quality</label>
+        <input id="rangeChoice" type="text">
+        <br>
+        
+
+    </div>
+
+
+
+
+</section>
+
+
+</body>
+
+</html>

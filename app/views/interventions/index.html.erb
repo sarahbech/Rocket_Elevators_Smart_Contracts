@@ -1,0 +1,178 @@
+<body class="smoothscroll enable-animation">
+
+<% if current_user.try(:admin?) %>
+<!-- wrapper -->
+		<div id="wrapper">
+
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="/">
+							<img src="/assets/homePage_RocketElevatorsMainLogo.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES.:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li><!-- HOME -->
+										<a href="/">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+                                        <a href="/#services">
+                                            SERVICES
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/residential.html">Residential Services</a></li>
+                                            <li><a href="/commercial.html">Commercial Services</a></li>
+                                            <li><a href="/quote.html">Get a Quote</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><!-- PORTFOLIO -->
+										<a href="/#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="/#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="/#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="/#contact">
+											CONTACT
+										</a>
+									</li>
+									<li><!-- INTERVENTIONS -->
+										<a href="/interventions.html">
+                      INTERVENTIONS
+										</a>
+									</li>
+									<li>
+									<!-- Account -->
+								<% if current_user %>
+								<a href="">
+										<%= current_user.email %>
+									</a>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="">
+										  <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+									</a>
+								  </li>
+									<% if current_user.admin == true %>
+								  <li>
+									<a href="/admin">
+										DASHBOARD
+									</a>
+								  </li>
+								  <li>
+                     <a href="/interventions.html">
+                       INTERVENTIONS
+                    </a>
+                   </li>
+									<% end %>
+								<% else %>
+										<%= link_to 'ACCOUNT', new_user_session_path %>
+									<ul class="dropdown-menu">
+								  <li>
+								  <a href="">
+										<%= link_to 'SIGN IN', new_user_session_path %>
+								  </a>
+								  </li>
+						
+									<% end %>
+									</ul>
+								</li>
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+      <section id="interventiontable">
+        <div class="container">
+
+            <div class="heading-title heading-dotted text-center">
+                <h2>Interventions</h2>
+            </div>
+
+<fieldset class="mb-0 box-border-shadow p-20">
+
+
+  <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Customer</th>
+                    <th>Building</th>
+                    <th>Battery</th>
+                    <th>Column</th>
+                    <th>Elevator</th>
+                    <th>Results</th>
+                    <th>Report</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+  <tbody>
+    <% @interventions.each do |intervention| %>
+      <tr>
+        <td><%= intervention.employee.last_name%></td>
+        <td><%= intervention.customer.contactFullName%></td>
+        <td><%= intervention.building_id%></td>
+        <td><%= intervention.battery_id%></td>
+        <td><%= intervention.column_id%></td>
+        <td><%= intervention.elevator_id%></td>
+        <td><%= intervention.results%></td>
+        <td><%= intervention.report%></td>
+        <td><%= intervention.status%></td>
+        </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intervention', new_intervention_path %>
+<% end %>
+</fieldset>
+</div>
+</div>
+</section>
+</body>

@@ -1,0 +1,186 @@
+<body class="smoothscroll enable-animation">
+<!-- wrapper -->
+		<div id="wrapper">
+
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="/">
+							<img src="/assets/homePage_RocketElevatorsMainLogo.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES.:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li><!-- HOME -->
+										<a href="/">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+                                        <a href="/#services">
+                                            SERVICES
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/residential.html">Residential Services</a></li>
+                                            <li><a href="/commercial.html">Commercial Services</a></li>
+                                            <li><a href="/quote.html">Get a Quote</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><!-- PORTFOLIO -->
+										<a href="/#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- SOUNDS -->
+										<a href="/sounds.html">
+											SOUNDS
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="/#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="/#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="/#contact">
+											CONTACT
+										</a>
+									</li>
+									<li><!-- INTERVENTIONS -->
+										<a href="/interventions.html">
+                                        INTERVENTIONS
+										</a>
+									</li>
+									<li>
+									<!-- Account -->
+								<% if current_user %>
+								<a href="">
+										<%= current_user.email %>
+									</a>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="">
+										  <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+									</a>
+								  </li>
+									<% if current_user.admin == true %>
+								  <li>
+									<a href="/admin">
+										DASHBOARD
+									</a>
+								  </li>
+								  <li>
+                     <a href="/interventions.html">
+                       INTERVENTIONS
+                    </a>
+                   </li>
+									<% end %>
+								<% else %>
+										<%= link_to 'ACCOUNT', new_user_session_path %>
+									<ul class="dropdown-menu">
+								  <li>
+								  <a href="">
+										<%= link_to 'SIGN IN', new_user_session_path %>
+								  </a>
+								  </li>
+						
+									<% end %>
+									</ul>
+								</li>
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+<section id="intervention">
+        <div class="container">
+
+            <div class="heading-title heading-dotted text-center">
+                <h2>New Interventions</h2>
+            </div>
+
+<fieldset class="mb-0 box-border-shadow p-20">
+
+
+<%= form_for(@intervention, local: true) do |form| %>
+  <% if @intervention.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@intervention.errors.count, "error") %> prohibited this intervention from being saved:</h2>
+
+      <ul>
+      <% @intervention.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+                
+     
+    <h6><%="Customer Name"%></h6>
+    <%= select_tag "customer_id", options_from_collection_for_select(Customer.all, "id", "contactFullName"), prompt: "None" %>
+    <br>
+    <h6><%="Building Id - Admin Contact"%></h6>
+    <%= select_tag "building_id", options_from_collection_for_select(Building.all, "id", "id"), prompt: "None" %>
+    <br>
+    <h6><%="Battery Id"%></h6>
+    <%= select_tag "battery_id", options_from_collection_for_select(Battery.all, "id", "id"), prompt: "None" %>
+    <br>
+    <h6><%="Column Id"%></h6>
+    <%= select_tag "column_id", options_from_collection_for_select(Column.all, "id", "id"), prompt: "None" %>
+    <br>
+    <h6><%="Elevator Id"%></h6>
+    <%= select_tag "elevator_id", options_from_collection_for_select(Elevator.all, "id", "id"), prompt: "None" %>
+    <br>
+    <h6><%="Results"%></h6>
+    <%= text_field_tag "results", "Results" %>
+    <br>
+    <h6><%="Report"%></h6>
+    <%= text_field_tag "report", "Report" %>
+    <br>
+    <h6><%="Status"%></h6>
+    <%= text_field_tag "status", "Status" %>
+	<h6><%="Employee Last Name"%></h6>           
+    <%= select_tag "employee_id", options_from_collection_for_select(Employee.all, "id", "last_name"), prompt: "None" %>
+    <br>
+
+    <%= form.submit %>  
+    
+<% end %>
+</fieldset>
+</div>
+
+</section>
+</div>
+</body>

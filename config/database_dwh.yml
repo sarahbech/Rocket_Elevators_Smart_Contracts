@@ -1,0 +1,16 @@
+
+development:
+  adapter: postgresql
+  encoding: utf8
+  host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+  pool: 10
+  database: EtienneBosse
+  username: codeboxx
+  password: Codeboxx1!
+
+
+test:
+  database: myapp_test
+
+production:
+  database: myapp_prod

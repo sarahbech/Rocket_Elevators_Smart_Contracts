@@ -1,0 +1,214 @@
+<body class="smoothscroll enable-animation">
+<!-- wrapper -->
+		<div id="wrapper">
+
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="/">
+							<img src="assets/homePage_RocketElevatorsMainLogo.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li><!-- HOME -->
+										<a href="/">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+                                        <a href="/#services">
+                                            SERVICES
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="residential.html">Residential Services</a></li>
+                                            <li><a href="quote.html">Get a Quote</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><!-- PORTFOLIO -->
+										<a href="/#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- SOUNDS -->
+										<a href="/sounds.html">
+											SOUNDS
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="/#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="/#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="/#contact">
+											CONTACT
+										</a>
+									</li>
+									<li>
+									<!-- Account -->
+								<% if current_user %>
+								<a href="">
+										<%= current_user.email %>
+									</a>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="">
+										  <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+									</a>
+								  </li>
+									<% if current_user.admin == true %>
+								  <li>
+									<a href="/admin">
+										DASHBOARD
+									</a>
+								  </li>
+								  <li>
+                                  <a href="/interventions.html">
+                                        INTERVENTIONS
+                                    </a>
+                                  </li>
+									<% end %>
+								<% else %>
+								<%= link_to 'ACCOUNT', new_user_session_path %>
+									<ul class="dropdown-menu">
+								  <li>
+								  <a href="">
+										<%= link_to 'SIGN IN', new_user_session_path %>
+								  </a>
+								  </li>
+									<% end %>	
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- Our Commercial Services | Summary -->
+			<section id="commercial services summary">
+				<div class="container">
+
+					<div class="heading-title heading-dotted text-center">
+						<h2>Our Commercial Services</h2>
+					</div>
+
+					<!-- 
+						controlls-over		= navigation buttons over the image 
+						buttons-autohide 	= navigation buttons visible on mouse hover only
+						
+						data-plugin-options:
+							"singleItem": true
+							"autoPlay": true (or ms. eg: 4000)
+							"navigation": true
+							"pagination": true
+							"items": "4"
+
+						owl-carousel item paddings
+							.owl-padding-0
+							.owl-padding-3
+							.owl-padding-6
+							.owl-padding-10
+							.owl-padding-15
+							.owl-padding-20
+					-->
+					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
+						<div class="img-hover">
+							<a>
+								<img class="img-fluid" src="assets/servicePages_bestPriceGuaranteed.png" alt="" style="width:283.5px;height:189px;">
+							</a>
+							<h4 class="text-left mt-20"><a>PRICES<br />Lowest Prices Guaranteed</a></h4>
+							<p class="text-left">Rocket Elevators GUARANTEES the BEST PRICES on the market. A company offer the same product for the same price? WE WILL MATCH IT!</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a>
+								<img class="img-fluid" src="assets/servicePages_warranty.png" alt="" style="width:283.5px;height:189px;">
+							</a>
+							<h4 class="text-left mt-20"><a>WARRANTY<br />10 Years*</a></h4>
+							<p class="text-left">We offer a 10-YEAR WARRANTY on all our commercial elevators.<br /><br />Please contact us to know all conditions.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a>
+								<img class="img-fluid" src="assets/servicePages_bestQualityGuaranteed.png" alt="" style="width:283.5px;height:189px;">
+							</a>
+							<h4 class="text-left mt-20"><a>QUALITY<br />The Highest on the Market</a></h4>
+							<p class="text-left">The quality of our products stands out WORLDWIDE.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a>
+								<img class="img-fluid" src="assets/servicePages_cDesign.png" alt="" style="width:283.5px;height:189px;">
+							</a>
+							<h4 class="text-left mt-20"><a>DESIGN<br />5 Stars</a></h4>
+							<p class="text-left">Our designers team constantly SURPASSES itself to offer the MOST CREATIVE lifts possible.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a>
+								<img class="img-fluid" src="assets/servicePages_cService.png" alt="" style="width:283.5px;height:189px;">
+							</a>
+							<h4 class="text-left mt-20"><a>SERVICE<br />High Quality | 24/7</a></h4>
+							<p class="text-left">Our MOBILE UNITS can be at your business in LESS THAN 1 HOUR!<br /><br />Our service is OPEN 24/7 ALL YEAR LONG!</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /Our Commercial Services | Summary -->
+            <!-- Parallax -->
+			<section class="parallax parallax-1" style="background-image: url('assets/homePage_Since1976.jpeg');">
+				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<div class="text-center">
+						<h2 class="fs-40 fw-300">Rocket Elevators | <strong>Since 1976</strong></h2>
+						<a class="btn btn-danger btn-lg" href="quote.html">GET A QUOTE <i class="fa fa-angle-right"></i></a> 
+						&nbsp; OR &nbsp; 
+						<a class="btn btn-success btn-lg" href="/#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Parallax -->

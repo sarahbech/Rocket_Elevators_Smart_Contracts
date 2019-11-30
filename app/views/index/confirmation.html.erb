@@ -1,0 +1,152 @@
+<body class="smoothscroll enable-animation">
+   
+        <!-- 
+                AVAILABLE HEADER CLASSES
+                Default nav height: 96px
+                .header-md      = 70px nav height
+                .header-sm      = 60px nav height
+                .b-0        = remove bottom border (only with transparent use)
+                .transparent    = transparent header
+                .translucent    = translucent header
+                .sticky         = sticky header
+                .static         = static header
+                .dark           = dark header
+                .bottom         = header on bottom
+                
+                shadow-before-1 = shadow 1 header top
+                shadow-after-1  = shadow 1 header bottom
+                shadow-before-2 = shadow 2 header top
+                shadow-after-2  = shadow 2 header bottom
+                shadow-before-3 = shadow 3 header top
+                shadow-after-3  = shadow 3 header bottom
+                .clearfix       = required for mobile menu, do not remove!
+                Example Usage:  class="clearfix sticky header-sm transparent b-0"
+            -->
+        <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- Logo -->
+                    <a class="logo float-left scrollTo" href="/">
+                        <img src="/assets/homePage_RocketElevatorsMainLogo.png" alt="RocketElevators" />
+                    </a>
+                    <!-- 
+                            Top Nav 
+                            
+                            AVAILABLE CLASSES:
+                            submenu-dark = dark sub menu
+                        -->
+                    <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                        <nav class="nav-main">
+                            <!-- 
+                                    .nav-onepage
+                                    Required for onepage navigation links
+                                    
+                                    Add .external for an external link!
+                                -->
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li>
+                                    <!-- HOME -->
+                                    <a href="/">
+                                        HOME
+                                    </a>
+                                </li>
+                                <li>
+                                <li>
+                                    <!-- SERVICES -->
+                                    <a href="/#services">
+                                        SERVICES
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/residential">Residential Services</a></li>
+                                        <li><a href="/commercial">Commercial Services</a></li>
+                                        <li><a href="/quote">Get A Quote</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <!-- PORTFOLIO -->
+                                    <a href="/#portfolio">
+                                        PORTFOLIO
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- NEWS -->
+                                    <a href="/#news">
+                                        NEWS
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CLIENTS -->
+                                    <a href="/#clients">
+                                        CLIENTS
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CONTACT -->
+                                    <a href="/#contact">
+                                        CONTACT
+                                    </a>
+                                </li>
+                                	<li>
+									<!-- Account -->
+								<% if current_user %>
+								<a href="">
+										<%= current_user.email %>
+									</a>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="">
+										  <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+									</a>
+								  </li>
+									<% if current_user.admin == true %>
+								  <li>
+									<a href="/admin">
+										DASHBOARD
+									</a>
+								  </li>
+									<% end %>
+								<% else %>
+								<a href="">
+										 ACCOUNT
+									</a>
+									<ul class="dropdown-menu">
+								  <li>
+								  <a href="">
+										<%= link_to 'SIGN IN', new_user_session_path %>
+								  </a>
+								  </li>
+						
+									<% end %>
+									</ul>
+								</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- /Top Nav -->
+        </div>
+<section id="login">
+       <br />
+            <div class="heading-title heading-dotted text-center">
+                <h2>Your Quote</h2>
+                <br />
+                <br />
+                <br />
+                <br />
+             </div>
+             <center><p>Thank you for contacting us, we will get in touch shortly.</p></center>
+                <br />
+                <br />
+                <br />
+                
+</section>
+ <!-- /wrapper -->              
+ <!-- /LOGIN -->                    
+                        
+</body>

@@ -1,0 +1,1232 @@
+<body class="smoothscroll enable-animation">
+<!-- wrapper -->
+		<div id="wrapper">
+
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/homePage_RocketElevatorsMainLogo.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES.:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li><!-- HOME -->
+										<a href="#">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+                                        <a href="#services">
+                                            SERVICES
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/residential.html">Residential Services</a></li>
+                                            <li><a href="/commercial.html">Commercial Services</a></li>
+                                            <li><a href="/quote.html">Get a Quote</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><!-- PORTFOLIO -->
+										<a href="#portfolio">
+											PORTFOLIO
+										</a>
+										<li><!-- SOUNDS -->
+										<a href="/sounds.html">
+											SOUNDS
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="/#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="/#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="/#contact">
+											CONTACT
+										</a>
+									</li>
+									<li><!-- INTERVENTIONS -->
+										<a href="/interventions.html">
+                                        INTERVENTIONS
+										</a>
+									</li>
+									<li>
+									<!-- Account -->
+								<% if current_user %>
+								<a href="">
+										<%= current_user.email %>
+									</a>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="">
+										  <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+									</a>
+								  </li>
+									<% if current_user.admin == true %>
+								  <li>
+									<a href="/admin">
+										DASHBOARD
+									</a>
+								  </li>
+								  <li>
+                                  <a href="/interventions.html">
+                                        INTERVENTIONS
+                                    </a>
+                                  </li>
+								  <li>
+                                  <a href="/contract.html">
+                                        SMART CONTRACT
+                                    </a>
+                                  </li>
+									<% end %>
+								<% else %>
+										<%= link_to 'ACCOUNT', new_user_session_path %>
+									<ul class="dropdown-menu">
+								  <li>
+								  <a href="">
+										<%= link_to 'SIGN IN', new_user_session_path %>
+								  </a>
+								  </li>
+						
+									<% end %>
+									</ul>
+								</li>
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- REVOLUTION SLIDER -->
+			<div class="slider fullwidthbanner-container roundedcorners">
+				<!--
+					Navigation Styles:
+					
+						data-navigationStyle="" theme default navigation
+						
+						data-navigationStyle="preview1"
+						data-navigationStyle="preview2"
+						data-navigationStyle="preview3"
+						data-navigationStyle="preview4"
+						
+					Bottom Shadows
+						data-shadow="1"
+						data-shadow="2"
+						data-shadow="3"
+						
+					Slider Height (do not use on fullscreen mode)
+						data-height="300"
+						data-height="350"
+						data-height="400"
+						data-height="450"
+						data-height="500"
+						data-height="550"
+						data-height="600"
+						data-height="650"
+						data-height="700"
+						data-height="750"
+						data-height="800"
+				-->
+				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+					<ul class="hide">
+					
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Our Services | Get a Quote">
+							<!-- MAIN IMAGE -->
+							<img src="assets/homePage_RocketElevatorsLogo.jpg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="50"
+								data-y="100" 
+								data-speed="420"
+								data-start="1500"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Elevate Safety, <br />
+									Speed and Style
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="50"
+								data-y="300" 
+								data-speed="420"
+								data-start="1000"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									No matter the floor, our elevators make everything <br />
+									POSSIBLE
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="50"
+								data-y="410" 
+								data-speed="420"
+								data-start="1500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+								style="z-index: 4; max-width: auto;">
+									<a class="btn btn-danger" href="#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="250"
+								data-y="410" 
+								data-speed="420"
+								data-start="1500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+								style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+									<a class="btn btn-secondary" href="quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Our Residential Services">
+							<!-- MAIN IMAGE -->
+							<img src="assets/homePage_ResidentialService.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="tp-caption white_big skewfromleft tp-resizeme"
+								data-x="300"
+								data-y="100" 
+								data-speed="420"
+								data-start="1500"
+								data-easing="Power3.easeInOut"
+								data-splitin="words"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+								    Residential Building Services
+							</div>
+
+							<div class="tp-caption content_text_center skewfromleft tp-resizeme"
+								data-x="321"
+								data-y="195" 
+								data-speed="420"
+								data-start="2000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									Bring your DREAMS to their HIGHEST level and <br />
+									ALWAYS feel like HOME.
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="321"
+								data-y="300" 
+								data-speed="420"
+								data-start="2500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+
+								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+									<a class="btn btn-danger" href="residential.html">OUR RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Our Commercial Services">
+							<!-- MAIN IMAGE -->
+							<img src="assets/homePage_CommercialService.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="tp-caption white_big skewfromleft tp-resizeme"
+								data-x="25"
+								data-y="100" 
+								data-speed="420"
+								data-start="1500"
+								data-easing="Power3.easeInOut"
+								data-splitin="words"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+								    Commercial Building Services
+							</div>
+
+							<div class="tp-caption content_text_center skewfromleft tp-resizeme"
+								data-x="46"
+								data-y="195" 
+								data-speed="420"
+								data-start="2000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									Helping you to bring YOUR BUSINESS to the <br />
+									NEXT LEVEL.
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="46"
+								data-y="300" 
+								data-speed="420"
+								data-start="2500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="420"
+
+								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+									<a class="btn btn-danger" href="commercial.html">OUR COMMERCIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+			<!-- /REVOLUTION SLIDER -->
+
+
+			<hr class="m-0" /><!-- 1px line separator -->
+
+
+			<!-- BUTTON CALLOUT -->
+			<a href="#contact" class="btn btn-xlg btn-dark fs-20 fullwidth m-0 rad-0 p-40">
+				<span class="font-lato fs-30">
+					Any <strong>Comments</strong> and/or <strong>Questions</strong>? <br />
+					<strong>Contact us! &raquo;</strong>
+				</span>
+			</a>
+			<!-- /BUTTON CALLOUT -->
+
+
+			
+			<!-- Services -->
+			<section id="services">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-sm-4"
+						style="color:rgb(11, 100, 160);">
+							<a href="#portfolio">
+								<img class="img-fluid" src="assets/homePage_AwardsandGreatProjects.jpeg" alt="img" style="width:210px;height:140px;" />
+							</a>
+							<h3 class="mt-10">Our Awards and Great Projects</h3>
+							<p><strong>January 2019</strong> | Rocket Elevators named the BEST CONSTRUCTION COMPANY in North America by the World Construction Federation (WCF)<br /> 
+								<strong>March 2019</strong> | Rocket Elevators set a new WORLD RECORD: The elevator that cover the most floors: <strong>158!</strong></p>
+							<a href="#portfolio" class="btn btn-primary">LEARN MORE</a>
+						</div>
+
+						<div class="col-sm-4" 
+						style="color:grey;">
+							<a href="residential.html">
+								<img class="img-fluid" src="assets/homePage_ResidentialService2.jpeg" alt="img" style="width:210px;height:140px;"/>
+							</a>
+							<h3 class="mt-10">Our Residential Services</h3>
+							<p><strong>24/7 Service</strong> | Our mobile units can be at your home in LESS THAN 1 HOUR<br /><br /><strong>10-YEAR WARRANTY</strong><br />*Certain conditions apply</p>
+							<a href="residential.html" class="btn btn-secondary">LEARN MORE</a>
+						</div>
+
+						<div class="col-sm-4"
+						style="color:rgb(192, 50, 50);">
+							<a href="commercial.html">
+								<img class="img-fluid" src="assets/homePage_CommercialService2.jpeg" alt="img" style="width:210px;height:140px;"/>
+							</a>
+							<h3 class="mt-10">Our Commercial Services</h3>
+							<p><strong>24/7 Service</strong> | Our mobile units can be at your business in LESS THAN 1 HOUR<br /><br /><strong>10-YEAR WARRANTY</strong><br />*Certain conditions apply</p>
+							<a href="commercial.html" class="btn btn-danger">LEARN MORE</a>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /Services -->
+
+			
+
+
+			<!-- Parallax -->
+			<section class="parallax parallax-1" style="background-image: url('assets/homePage_Since1976.jpeg');">
+				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<div class="text-center">
+						<h2 class="fs-40 fw-300">Rocket Elevators | <strong>Since 1976</strong></h2>
+						<a class="btn btn-danger btn-lg" href="quote.html">GET A QUOTE <i class="fa fa-angle-right"></i></a> 
+						&nbsp; OR &nbsp; 
+						<a class="btn btn-success btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Parallax -->
+
+
+
+
+			<!-- PORTFOLIO -->
+			<section id="work">
+				<div class="container">
+
+					<div class="heading-title heading-dotted text-center">
+						<h2>Awards &amp; Great Projects</h2>
+					</div>
+
+					<div class="text-center">
+						<ul class="nav nav-pills mix-filter mb-60">
+							<li data-filter="all" class="filter active"><a href="#">All</a></li>
+							<li data-filter="awards" class="filter"><a href="#">Awards</a></li>
+							<li data-filter="residential" class="filter"><a href="#">Residential</a></li>
+							<li data-filter="commercial" class="filter"><a href="#">Commercial</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="portfolio" class="portfolio-nogutter">
+
+						<div class="row mix-grid">
+
+							<div class="col-md-3 col-sm-3 mix awards"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_Award1.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_Award1.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Best Construction Company<br />in North America</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Awards</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix awards"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_Award2.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_Award2.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>World Tallest Elevator</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Awards</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorR1.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorR1.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Queen Victoria | Victoria, CANADA</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Residential</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorR2.jpeg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorR2.jpeg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Unknown Forrest | Frankfurt, GERMANY</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Residential</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorR3.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorR3.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Pacific View | Seattle, UNITED STATES</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Residential</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorR4.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorR4.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nuestra Casa | Barcelona, SPAIN</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Residential</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorR5.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorR5.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Pot of Gold | Dublin, IRELAND</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Residential</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix commercial"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorC1.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorC1.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>The Dreamer | Toronto, CANADA</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Commercial</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix commercial"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorC2.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorC2.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>American Dream | Chicago, UNITED STATES</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Commercial</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix commercial"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorC3.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorC3.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>The Depot | Los Angeles, UNITED STATES</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Commercial</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix commercial"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorC4.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorC4.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>The Crown | London, UNITED KINGDOM</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Commercial</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix commercial"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="assets/homePage_ElevatorC5.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="assets/homePage_ElevatorC5.jpg" alt="" style="width:600px;height:189.5px;">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nordic Classic | Helsinki, FINLAND</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Commercial</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+						</div>
+
+
+				</div>
+			</section>
+			<!-- /PORTFOLIO -->
+
+
+
+
+			<!-- Testimonials -->
+			<section class="section-xs dark">
+				<div class="container">
+
+					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
+						<div class="testimonial">
+							<figure>
+								<img class="rounded" src="assets/homePage_CEO.jpeg" alt="" />
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead"><strong>CEO</strong> | It's the perfection of the smallest details that make big things happen!</p>
+								<cite>
+									Mr Mathieu LeFrançois
+									<span>Rocket Elevators Inc.</span>
+								</cite>
+							</div>
+						</div>
+						<div class="testimonial">
+							<figure>
+								<img class="rounded" src="assets/homePage_EmployeeOfTheMonth.png" alt="" />
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead"><strong>Employee of the Month</strong> | We didn't reach perfection, but we constantly strove toward it!</p>
+								<cite>
+									Mr Etienne Bosse
+									<span>Rocket Elevators Inc.</span>
+								</cite>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Testimonials -->
+
+
+
+
+
+			<!-- News -->
+			<section id="news">
+				<div class="container">
+
+					<div class="heading-title heading-dotted text-center">
+						<h2>Recent News</h2>
+					</div>
+
+					<!-- 
+						controlls-over		= navigation buttons over the image 
+						buttons-autohide 	= navigation buttons visible on mouse hover only
+						
+						data-plugin-options:
+							"singleItem": true
+							"autoPlay": true (or ms. eg: 4000)
+							"navigation": true
+							"pagination": true
+							"items": "4"
+
+						owl-carousel item paddings
+							.owl-padding-0
+							.owl-padding-3
+							.owl-padding-6
+							.owl-padding-10
+							.owl-padding-15
+							.owl-padding-20
+					-->
+					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
+						<div class="img-hover">
+							<a href="https://www.archdaily.com/879757/which-building-has-the-worlds-fastest-moving-elevator">
+								<img class="img-fluid" src="assets/homePage_Article4.jpg" alt="" style="width:283.5px;height:189px;">
+							</a>
+
+							<h4 class="text-left mt-20"><a href="https://www.archdaily.com/879757/which-building-has-the-worlds-fastest-moving-elevator">Building | World's Fastest-Moving Elevator</a></h4>
+							<p class="text-left">Trying to reach the fastest (and safest) possible speed, elevator builders always want to set a new speed record. Their main question was, is and will be how to reach, in a safe way, the fastest speed?</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i> 
+									23rd Sep 2017
+								</li>
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a href="http://mentalfloss.com/article/501561/new-record-set-world%E2%80%99s-fastest-elevator">
+								<img class="img-fluid" src="assets/homePage_Article5.jpg" alt="" style="width:283.5px;height:189px;">
+							</a>
+							<h4 class="text-left mt-20"><a href="http://mentalfloss.com/article/501561/new-record-set-world%E2%80%99s-fastest-elevator">New Record | World's Fastest Elevator</a></h4>
+							<p class="text-left">How to build higher? How to build stronger? How to move faster? An endless amount of challenges, this is what the 21st century brings to us! However, with those challenges come new records. There's one you might like!</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i> 
+									7th Jun 2017
+								</li>
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a href="https://www.cnn.com/style/article/worlds-fastest-tower/index.html">
+								<img class="img-fluid" src="assets/homePage_Article3.jpg" alt="" style="width:283.5px;height:189px;">
+							</a>
+
+							<h4 class="text-left mt-20"><a href="https://www.cnn.com/style/article/worlds-fastest-tower/index.html">Shanghai Tower | 3 Guinness World Records</a></h4>
+							<p class="text-left">In the construction world, set new records is still something important. By setting 3 new world records, the Shanghai Tower set the bar for the next few decades! Now we can only question ourself when, where and by whom those records will be beat?</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i> 
+									19th Apr 2017
+								</li>
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a href="https://www.washingtonpost.com/world/asia_pacific/the-surprisingly-cutthroat-race-to-build-the-worlds-fastest-elevator/2017/01/03/8f6a83ae-8910-4786-b1da-dd049b702f20_story.html?noredirect=on">
+								<img class="img-fluid" src="assets/homePage_Article2.jpg" alt="" style="width:283.5px;height:189px;">
+							</a>
+
+							<h4 class="text-left mt-20"><a href="https://www.washingtonpost.com/world/asia_pacific/the-surprisingly-cutthroat-race-to-build-the-worlds-fastest-elevator/2017/01/03/8f6a83ae-8910-4786-b1da-dd049b702f20_story.html?noredirect=on">Cutthroat Race | Who'll build the World's Fastest Elevator</a></h4>
+							<p class="text-left">Who will be first? Who will be the fastest? It's a question of months, of weeks, of days to know the answers to those questions. Everyone wants to win, but only one will. Who? Only time will tell!</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i> 
+									4th Jan 2017
+								</li>
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a href="https://www.businessinsider.com/the-8-fastest-elevators-in-the-world-2013-1">
+								<img class="img-fluid" src="assets/homePage_Article1.jpg" alt="" style="width:283.5px;height:189px;">
+							</a>
+							<h4 class="text-left mt-20"><a href="https://www.businessinsider.com/the-8-fastest-elevators-in-the-world-2013-1">World's Fastest Elevators | The Asian Skyscrapers Domination</a></h4>
+							<p class="text-left">The asian continent is full of incredible technologic realisations. Most of the time, asian skyscrapers dominate in alot of aspects. Once again, they kept their 1st place into the ranking with their elevators.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i> 
+									23rd Jan 2013
+								</li>
+							</ul>
+						</div>
+						<div class="img-hover">
+							<a href=https://www.popularmechanics.com/technology/design/g590/worlds-18-strangest-elevators/>
+								<img class="img-fluid" src="assets/homePage_Article6.jpg" alt="" style="width:283.5px;height:189px;">
+							</a>
+
+							<h4 class="text-left mt-20"><a href=https://www.popularmechanics.com/technology/design/g590/worlds-18-strangest-elevators/>Stranger Than Never | World's 18 Strangest Elevators</a></h4>
+							<p class="text-left">Every ways are accepted to be creative. Some will call them stranges, some will call them originals. And you, how would you describe them? Let us know and enjoy!</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i> 
+									9th Aug 2011
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+
+				</div>
+			</section>
+			<!-- /News -->
+
+			<!-- Clients -->
+			<section id="clients" class="alternate">
+				<div class="container">
+
+					<div class="heading-title heading-dotted text-center">
+						<h2>Our Clients</h2>
+					</div>
+
+					<ul class="row clients-dotted list-inline">
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client1.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client2.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client3.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client4.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client5.jpg" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client6.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client7.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client8.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client9.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client10.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client11.png" alt="client" />
+							
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							
+								<img class="img-fluid" src="assets/homePage_Client12.png" alt="client" />
+							
+						</li>
+					</ul>
+
+				</div>
+			</section>
+			<!-- /Clients -->
+
+
+
+
+			<!-- CONTACT -->
+			<section id="contact">
+				<div class="container">
+
+					<header class="text-center mb-60">
+						<h2>Contact Us</h2>
+						<p class="lead font-lato">It is all about communication!</p>
+						<hr />
+					</header>
+
+
+					<div class="row">
+
+						<!-- FORM -->
+						<div class="col-md-8 col-sm-8">
+
+							<h3>The Perfect Spot to Keep in Touch</h3>
+
+							
+							<!--
+								MESSAGES
+								
+									How it works?
+									The form data is posted to php/contact.php where the fields are verified!
+									php.contact.php will redirect back here and will add a hash to the end of the URL:
+										#alert_success 		= email sent
+										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+										#alert_mandatory	= email not sent - required fields empty
+										Hashes are handled by assets/js/contact.js
+
+									Form data: required to be an array. Example:
+										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+										Also, add `required` to input fields if is a mandatory field. 
+										Example: <input required type="email" value="" class="form-control" name="contact[email]">
+
+									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+									WARNING! Do not change the `email` and `name`!
+												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+							-->
+
+							<!-- Alert Success -->
+							<div id="alert_success" class="alert alert-success mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Thank You!</strong> Your message successfully sent!
+							</div><!-- /Alert Success -->
+
+
+							<!-- Alert Failed -->
+							<div id="alert_failed" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>[SMTP] Error!</strong> Internal server error!
+							</div><!-- /Alert Failed -->
+
+
+							<!-- Alert Mandatory -->
+							<div id="alert_mandatory" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+							</div><!-- /Alert Mandatory -->
+
+
+							<form action="/leads" method="post" enctype="multipart/form-data">
+								<fieldset>
+									<input type="hidden" name="action" value="leads_send" />
+
+									<div class="row">
+											<div class="col-md-6">
+												<label for="leads:name">Full Name *</label>
+												<input required type="text" value="" class="form-control" name="fullName" id="fullName" pattern="[a-zA-Z ]*">
+											</div>
+											<div class="col-md-6">
+												<label for="leads:subject">Company *</label>
+												<input required type="text" value="" class="form-control" name="company" id="company" pattern="[a-zA-Z ]*">
+											</div>
+									</div>
+									<div class="row">
+										    <div class="col-md-6">
+											    <label for="leads:email">@ | E-mail Address *</label>
+											    <input required type="email" value="" class="form-control" name="email" id="email">
+										    </div>
+											<div class="col-md-6">
+												<label for="leads:phone"> # | Phone</label>
+												<input type="text" value="" class="form-control" name='phoneNumber' id="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+											</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<label for="leads:subject">Project Name *</label>
+											<input required type="text" value="" class="form-control" name="projectName" id="projectName" pattern="[a-zA-Z ]*">
+										</div>
+										<div class="col-md-4">
+											<label for="leads:subject">Postal Code *</label>
+											<input required type="text" value="" class="form-control" name="postalCode" id="postalCode">
+										</div>
+										<div class="col-md-4">
+											<label for="department">Department</label>
+											<select class="form-control pointer" name="department">
+												<option value="">--- Select ---</option>
+												<option value="Commercial">Commercial</option>
+												<option value="Residential">Residential</option>
+												<option value="Other">Other</option>
+											</select>
+										</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<label for="projectDescription">Project Description *</label>
+										<textarea required maxlength="10000" rows="2" class="form-control" name="projectDescription" id="projectDescription" pattern="[a-zA-Z ]*"></textarea>
+									</div>
+							</div>
+									<div class="row">
+											<div class="col-md-12">
+												<label for="message">Message *</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="message" id="message" pattern="[a-zA-Z ]*"></textarea>
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-12">
+												<label for="uploadFile">File Attachment</label>
+												
+
+												<!-- custom file upload -->
+												<input class="custom-file-upload" type="file" id="file" name="uploadFile" id="uploadFile" data-btn-text="Select a File" />												
+												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+											</div>
+									</div>
+
+								</fieldset>
+
+								<div class="row">
+									<div class="col-md-12">
+									<leads action="confirmation" >
+										<button type="submit" class="btn btn-success"><i class="fa fa-check"></i> SEND MESSAGE</button>
+									</leads>
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<!-- /FORM -->
+
+
+						<!-- INFO -->
+						<div class="col-md-4 col-sm-4">
+
+							<h2>Visit Us</h2>
+							<p>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> <a href="https://www.google.ca/maps/place/COMPLEXE+VISION/@46.8426713,-71.2818061,17z/data=!3m1!4b1!4m5!3m4!1s0x4cb897dd6ce765a3:0xc2bde929475747c9!8m2!3d46.8426713!4d-71.2796174">725 Lebourgneuf Blvd, Quebec, Canada</a></span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1581-701-0303">(581) 701-0303</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
+							</p>
+
+						</div>
+						<!-- /INFO -->
+
+					</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- /CONTACT -->

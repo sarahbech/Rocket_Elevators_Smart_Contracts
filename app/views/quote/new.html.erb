@@ -1,0 +1,411 @@
+<body class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+        <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo float-left scrollTo" href="/">
+                        <img src="assets/homePage_RocketElevatorsMainLogo.png" alt="" />
+                    </a>
+
+                    <!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+                    <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                        <nav class="nav-main">
+
+                            <!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li>
+                                    <!-- HOME -->
+                                    <a href="/">
+                                        HOME
+                                    </a>
+                                </li>
+                                <li>
+                                <li>
+                                    <!-- SERVICES -->
+                                    <a href="/#services">
+                                        SERVICES
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="residential.html">Residential Services</a></li>
+                                        <li><a href="commercial.html">Commercial Services</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <!-- PORTFOLIO -->
+                                    <a href="/#portfolio">
+                                        PORTFOLIO
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- NEWS -->
+                                    <a href="/#news">
+                                        NEWS
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CLIENTS -->
+                                    <a href="/#clients">
+                                        CLIENTS
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CONTACT -->
+                                    <a href="/#contact">
+                                        CONTACT
+                                    </a>
+                                </li>
+                                <li>
+									<!-- Account -->
+								<% if current_user %>
+								<a href="">
+										<%= current_user.email %>
+									</a>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="">
+										  <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+									</a>
+								  </li>
+									<% if current_user.admin == true %>
+								  <li>
+									<a href="/admin">
+										DASHBOARD
+									</a>
+								  </li>
+									<% end %>
+								<% else %>
+										<%= link_to 'ACCOUNT', new_user_session_path %>
+									<ul class="dropdown-menu">
+								  <li>
+								  <a href="">
+										<%= link_to 'SIGN IN', new_user_session_path %>
+								  </a>
+								  </li>
+									<% end %>	
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                </div>
+            </header>
+            <!-- /Top Nav -->
+
+        </div>
+
+        <!-- QUOTE -->
+    <section id="quote">
+        <div class="container">
+
+            <div class="heading-title heading-dotted text-center">
+                <h2>Your Quote</h2>
+            </div>
+        <fieldset class="mb-0 box-border-shadow p-20">
+        
+									<div class="row">
+											<div class="col-md-6">
+												<label for="quote:fullName">Full Name *</label>
+												<input required type="text" value="" class="form-control" name="quoteName" id="quote:name">
+											</div>
+											<div class="col-md-6">
+												<label for="quote:company">Company *</label>
+												<input required type="text" value="" class="form-control" name="quoteCompany" id="quote:company">
+											</div>
+									</div>
+									<div class="row">
+										    <div class="col-md-6">
+											    <label for="quote:email">@ | E-mail Address *</label>
+											    <input required type="email" value="" class="form-control" name="quoteEmail" id="quote:email">
+										    </div>
+											<div class="col-md-6">
+												<label for="quote:phone"># | Phone</label>
+												<input type="text" value="" class="form-control" name="quotePhone" id="quote:phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+											</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<label for="quote:projectName">Project Name *</label>
+											<input required type="text" value="" class="form-control" name="quoteProjectName" id="quote:projectName">
+										</div>
+										<div class="col-md-4">
+											<label for="quote:postalCode">Postal Code *</label>
+											<input required type="text" value="" class="form-control" name="quotePostal" id="quote:postalCode">
+										</div>
+								    </div>
+								<div class="row">
+									<div class="col-md-12">
+										<label for="quote:projectDescription">Project Description *</label>
+										<textarea required maxlength="10000" rows="2" class="form-control" name="quoteDescription" id="quote:projectDescription"></textarea>
+									</div>
+							    </div>
+									<div class="row">
+											<div class="col-md-12">
+												<label for="quote:message">Message *</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="quoteMessage" id="quote:message"></textarea>
+											</div>
+									</div>
+
+            <br>
+            <br>
+            
+            <div class="column">
+                <div class="col-md-6 float-left">
+                        <select id="buildingType" name="buildingType" onchange="selected()">
+                                <option value="selectanoption">- Select an option -</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="residential">Residential</option>
+                            </select>
+
+
+                    <!-- RESIDENTIAL OPTIONS -->
+                    <div id="residential">
+                        <label for="residential_numberOfApartments">Number of apartment(s) *</label>
+                        <input required type="number" onkeyup="residential()" onchange="residential()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="resiAparts" id="residential_numberOfApartments">
+                        <label for="residential_numberOfFloors">Number of floor(s) *</label>
+                        <input required type="number" onkeyup="residential()" onchange="residential()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="resiFloor"
+                            id="residential_numberOfFloors">
+                        <label for="residential_numberOfBasements">Number of basement(s) *</label>
+                        <input required type="number" onkeyup="residential()" onchange="residential()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="resiBase"
+                            id="residential_numberOfBasements">
+                    </div>
+
+
+                    <!-- COMMERCIAL OPTIONS -->
+                    <div id="commercial">
+                        <label for="commercial_numberOfDistinctBusinesses">Number of distinct business(es) *</label>
+                        <input required type="number" onkeyup="commercial()" onchange="commercial()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="commShops" id="commercial_numberOfDistinctBusinesses">
+                        <label for="commercial_numberOfFloors">Number of floor(s) *</label>
+                        <input required type="number" onkeyup="commercial()" onchange="commercial()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="commFloor"
+                            id="commercial_numberOfFloors">
+                        <label for="commercial_numberOfBasements">Number of basement(s) *</label>
+                        <input required type="number" onkeyup="commercial()" onchange="commercial()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="commBase"
+                            id="commercial_numberOfBasements">
+                        <label for="commercial_numberOfParkingSpacesAvailable">Number of parking spaces available
+                            *</label>
+                        <input required type="number" onkeyup="commercial()" onchange="commercial()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="commParks"
+                            id="commercial_numberOfParkingSpacesAvailable">
+                        <label for="commercial_numberOfElevatorCagesToDeploy">Number of elevator cage(s) to deploy
+                            *</label>
+                        <input required type="number" onkeyup="commercial()" onchange="commercial()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="commShafts" id="commercial_numberOfElevatorCagesToDeploy">
+                    </div>
+
+
+                    <!-- CORPORATE OPTIONS -->
+                    <div id="corporate">
+                        <label for="corporate_numberOfSeperateTenantCompanies">Number of separate tenant company(ies)
+                            *</label>
+                        <input required type="number" onkeyup="corporate()" onchange="corporate()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="corpTenants"
+                            id="corporate_numberOfSeperateTenantCompanies">
+                        <label for="corporate_numberOfFloors">Number of floor(s) *</label>
+                        <input required type="number" onkeyup="corporate()" onchange="corporate()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="corpFloor"
+                            id="corporate_numberOfFloors">
+                        <label for="corporate_numberOfBasements">Number of basement(s) *</label>
+                        <input required type="number" onkeyup="corporate()" onchange="corporate()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="corpBase"
+                            id="corporate_numberOfBasements">
+                        <label for="corporate_numberOfParkingSpacesAvailable">Number of parking spaces available
+                            *</label>
+                        <input required type="number" onkeyup="corporate()" onchange="corporate()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="corpParks"
+                            id="corporate_numberOfParkingSpacesAvailable">
+                        <label for="corporate_maximumNumberOfOccupantsPerFloor">Maximum number of occupants per floor
+                            *</label>
+                        <input required type="number" onkeyup="corporate()" onchange="corporate()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="corpOcc"
+                            id="corporate_maximumNumberOfOccupantsPerFloor">
+                    </div>
+
+
+                    <!-- HYBRID OPTIONS -->
+                    <div id="hybrid">
+                        <label for="hybrid_numberOfSeperateTenantCompanies">Number of separate tenant company(ies)
+                            *</label>
+                        <input required type="number" onkeyup="hybrid()" onchange="hybrid()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="hybrShops"
+                            id="hybrid_numberOfSeperateTenantCompanies">
+                        <label for="hybrid_numberOfFloors">Number of floor(s) *</label>
+                        <input required type="number" onkeyup="hybrid()" onchange="hybrid()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="hybrFloor"
+                            id="hybrid_numberOfFloors">
+                        <label for="hybrid_numberOfBasements">Number of basement(s) *</label>
+                        <input required type="number" onkeyup="hybrid()" onchange="hybrid()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control" name="hybrBase"
+                            id="hybrid_numberOfBasements">
+                        <label for="hybrid_numberOfParkingSpacesAvailable">Number of parking spaces available *</label>
+                        <input required type="number" onkeyup="hybrid()" onchange="hybrid()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="hybrParks"
+                            id="hybrid_numberOfParkingSpacesAvailable">
+                        <label for="hybrid_maximumNumberOfOccupantsPerFloor">Maximum number of occupants per floor
+                            *</label>
+                        <input required type="number" onkeyup="hybrid()" onchange="hybrid()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" class="form-control"
+                            name="hybrOcc"
+                            id="hybrid_maximumNumberOfOccupantsPerFloor">
+                        <label for="hybrid_dailyActivityHoursInTheBuilding">Daily activity hours in the
+                            building*</label>
+                        <input required type="number" onkeyup="hybrid()" onchange="hybrid()" onkeyup="selection()" onclick="selection()" onchange="selection()" value="0" min="0" max="24" class="form-control"
+                            name="hybrHours"
+                            id="hybrid_dailyActivityHoursInTheBuilding">
+                    </div>
+                </div>
+            </div>
+                <div class="float-right">
+                        <h4>Product Ranges</h4>
+            
+                        <hr>
+            
+                                <div class="toggle-content">
+            
+                                    <div class="row m-0-bottom">
+                                        <div class="col-lg-12 m-0 clearfix">
+                                            <label class="mt-0 fs-14 fw-400 radio float-left m-0-top">
+                                                <input id="service_range" name="range" type="radio" value="Standard" onchange="selection()"/>
+                                                <i></i> <span class="fw-300">Standard</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-12 m-0 clearfix">
+                                            <label class="mt-0 fs-14 fw-400 radio float-left">
+                                                <input id="service_range" name="range" type="radio" value="Premium" onkeyup="selection()" onclick="selection()"/>
+                                                <i></i> <span class="fw-300">Premium</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-12 m-0 clearfix">
+                                            <label class="mt-0 fs-14 fw-400 radio float-left">
+                                                <input id="service_range" name="range" type="radio" value="Excelium" onkeyup="selection()" onclick="selection()"/>
+                                                <i></i> <span class="fw-300">Excelium</span>
+                                            </label>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                </div>
+
+            
+        
+    </fieldset>
+
+    <!-- TOTAL / PLACE ORDER -->
+    <br>
+    <br>
+            
+
+    <fieldset class="mb-10 box-border-shadow p-20">
+        <div class="toggle-transparent toggle-bordered-full clearfix">
+            <div class="toggle-content">
+               <div class="toggle active">
+               
+            
+                    <span class="clearfix">
+                        <span class="float-right fs-20" name = "elevatorQty" id="elev_recommandedQtyLabel"></span>
+                        <span class="float-right fs-20" name = "elevatorQty" id="elev_recommandedQty"></span>
+                        <span class="float-left">Number of elevator(s):</span>
+                    </span>
+
+                    <hr />
+
+                    <span class="clearfix">
+                        <span class="float-right" name ="serviceCost" id="cost_service">0.00 $</span>
+                        <span class="float-left">Service:</span>
+                    </span>
+                    <span class="clearfix">
+                        <span class="float-right" name ="installationFees" id="cost_installFees">0.00 $</span>
+                        <span class="float-left">Installation fees:</span>
+                    </span>
+
+                    <hr />
+
+                    <span class="clearfix">
+                        <span class="float-right fs-20" name ="totalCost" id="cost_total">0.00 $</span>
+                        <strong class="float-left">TOTAL:</strong>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <br>
+
+    <!-- SUBMIT BUTTON -->
+            <div href="#submit" class="font-lato fs-20">
+				<div>
+                <form action="confirmation" >
+                <button type="submit" class="btn-quote btn-lg btn-success fs-40 m-0 rad-0 p-30"><strong>Submit</strong> your <strong>Quote  </strong>  <i class="fa fa-check"></i></button>
+                </form>
+				</div>
+		    </div>
+	<!-- /SUBMIT BUTTON -->
+
+ </div>
+ </section>
+ <!-- /wrapper -->              
+ <!-- /QUOTE -->                    
+
+
+
+                <!-- SCROLL TO TOP -->
+                <a href="#" id="toTop"></a>
+
+
+                <!-- PRELOADER -->
+                <div id="preloader">
+                    <div class="inner">
+                        <span class="loader"></span>
+                    </div>
+                </div><!-- /PRELOADER -->
+
+            
+
+
+</body>
+
+</html>

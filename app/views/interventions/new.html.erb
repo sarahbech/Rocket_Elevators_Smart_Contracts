@@ -1,0 +1,9 @@
+<% if current_user.try(:admin?) %>
+
+<%= render 'form', intervention: @intervention %>
+
+<%= link_to 'Back', interventions_path %>
+
+
+
+<% end %>

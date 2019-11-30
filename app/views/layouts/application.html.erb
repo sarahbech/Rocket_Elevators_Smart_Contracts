@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <script>var plugin_path = '../';</script>
+
+		<meta charset="utf-8" />
+		<title>Rocket Elevators</title>
+		<link id="favicon" rel="shortcut icon" type="image/png" href="assets/homePage_shortCutIcon.png" />
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings-->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700", media: "all" %>
+    <%= stylesheet_link_tag "bootstrap.min.css", media: "all" %>
+    <%= stylesheet_link_tag "extralayers.css", media: "all" %>
+    <%= stylesheet_link_tag "settings.css", media: "all" %>
+    <%= stylesheet_link_tag "essentials.css", media: "all" %>
+    <%= stylesheet_link_tag "layout.css", media: "all" %>
+    <%= stylesheet_link_tag "header-1.css", media: "all" %>
+    <%= stylesheet_link_tag "color_scheme/blue.css", media: "all" %>
+    <%= stylesheet_link_tag "jquery.dataTables.css", media: "all" %>
+
+    
+<%= javascript_include_tag "application" %>
+
+  </head>
+
+  <body>
+  <% render 'layouts/alerts' %>
+    <%= yield %>
+  </body>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+
+
+      <div class="row">
+
+        <!-- col #1 -->
+        <div class="col-md-8">
+
+          <h3 class="letter-spacing-1">WHY US?</h3>
+
+          <!-- Small Description -->
+          <p>
+            Our GLOBAL REPUTATION is no longer to prove.<br />Our HUNDREDS OF MODELS will satisfy you is GUARANTEED!
+          </p>
+          <h2>(581) 701-0303</h2>
+        </div>
+        <!-- /col #1 -->
+
+        <!-- col #2 -->
+        <div class="col-md-4">
+          <h3 class="letter-spacing-1">DON'T MISS A THING</h3>
+
+          <!-- Newsletter Form -->
+          <p>Subscribe to our newsletter to get Important News & Offers</p>
+
+          <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              <input type="email" id="email" name="email" class="form-control required" placeholder="info@codeboxx.biz">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </span>
+            </div>
+          </form>
+          <!-- /Newsletter Form -->
+          
+        </div>
+        <!-- /col #2 -->
+
+      </div>
+
+
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <ul class="float-right m-0 list-inline mobile-block">
+
+        <li><a href="#" onclick="MyFunction();return false;">Terms &amp; Conditions</a></li>
+          
+          <li>&bull;</li>
+
+          <li><a href="#" onclick="MyFunction1();return false;">Privacy</a></li>
+
+        </ul>
+        &copy; All Rights Reserved, Rocket Elevators LTD
+      </div>
+    </div>
+
+  </footer>
+  <!-- /FOOTER -->
+
+</div>
+<!-- /wrapper -->
+
+
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>	
+
+</body>
+</html>

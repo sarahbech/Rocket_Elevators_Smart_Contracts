@@ -1,0 +1,101 @@
+addressType,status,entity,address,suitOrAppartment,city,postalcode,country,date
+Court,Active,082368377-X,5 Macpherson Trail,305,Jackson,39204,United States,2019-10-13
+Lane,Active,178170867-3,39 Lillian Way,7298,Great Neck,11024,United States,2019-09-25
+Hill,Active,151001693-7,75 Pawling Plaza,30,Pinellas Park,34665,United States,2019-08-20
+Avenue,Inactive,818433576-8,54 Graedel Terrace,7,Greensboro,27499,United States,2019-07-27
+Alley,Inactive,426176565-9,906 Hauk Drive,96,Phoenix,85010,United States,2019-07-15
+Avenue,Active,835834252-7,88 Monica Parkway,4,Portland,97271,United States,2019-07-13
+Way,Active,392184012-0,8 Lien Avenue,46,Atlanta,30316,United States,2019-07-09
+Trail,Inactive,327337152-8,944 Alpine Avenue,5619,Memphis,38150,United States,2019-07-07
+Junction,Active,460515449-3,57554 Boyd Place,335,Santa Anita,38900,Mexico,2019-06-19
+Terrace,Inactive,602081545-5,022 Veith Way,699,Lavaltrie,J5T,Canada,2019-06-16
+Drive,Active,478794127-5,71572 Monica Point,7004,Vista Hermosa,47670,Mexico,2019-06-10
+Lane,Inactive,106687034-9,940 Kenwood Trail,71,San Jose,95643,Mexico,2019-05-15
+Way,Inactive,359765307-3,697 Oak Valley Pass,42355,Cincinnati,45999,United States,2019-04-24
+Lane,Active,499250041-2,4 Old Shore Lane,0,Cuauhtemoc,62767,Mexico,2019-04-15
+Parkway,Inactive,243079186-2,3 Hazelcrest Pass,52,Las Vegas,89178,United States,2019-03-12
+Parkway,Inactive,420643232-5,99675 Dexter Parkway,76,Dallas,75210,United States,2019-03-08
+Avenue,Active,048703704-9,87 Reinke Alley,5,Miami,33190,United States,2019-03-07
+Junction,Active,585366429-8,608 Sage Junction,2,Côte-Saint-Luc,H7V,Canada,2019-02-28
+Parkway,Active,149605607-8,70 Northland Terrace,1577,Sainte-Thérèse,J7G,Canada,2019-02-02
+Court,Active,054050416-5,96 Pierstorff Street,9,Pasadena,91103,United States,2018-12-29
+Street,Inactive,093102020-4,05 Nevada Parkway,4164,La Guadalupe,95600,Mexico,2018-12-27
+Center,Active,724944239-2,60 Havey Trail,16805,Nelson,V1L,Canada,2018-12-22
+Point,Active,926314923-2,860 Butternut Point,6707,Benito Juarez,86403,Mexico,2018-12-16
+Circle,Inactive,219009866-1,7324 Ridgeview Pass,0,Vicente Guerrero,92440,Mexico,2018-12-08
+Street,Active,368981758-7,5 Longview Park,33440,Benito Juarez,66410,Mexico,2018-12-06
+Trail,Active,169910700-9,1081 Mallard Center,6958,Baton Rouge,70836,United States,2018-11-19
+Junction,Inactive,948006699-8,8809 Mcguire Parkway,600,San Diego,92110,United States,2018-11-09
+Park,Inactive,777477774-1,345 Nobel Point,6,Rafael Hernandez Ochoa,93995,Mexico,2018-11-06
+Lane,Active,939024167-7,8 7th Avenue,699,Des Moines,50362,United States,2018-11-05
+Hill,Active,130882460-2,561 Delaware Drive,5406,Pictou,M1M,Canada,2018-10-27
+Junction,Active,238217313-0,813 Veith Way,49278,Los Angeles,90055,United States,2018-10-16
+Lane,Inactive,867594474-8,49 Bayside Parkway,241,Philadelphia,19146,United States,2018-10-09
+Point,Active,417103532-5,985 Ruskin Avenue,0,Philadelphia,19104,United States,2018-10-01
+Court,Inactive,471432765-8,242 Lawn Avenue,45232,Colorado Springs,80935,United States,2018-09-06
+Crossing,Active,860700257-0,3 Moulton Terrace,9462,Obrera,32050,Mexico,2018-09-04
+Terrace,Inactive,975539097-9,0244 Farmco Pass,95,Atikokan,K1Y,Canada,2018-09-03
+Circle,Active,540841294-6,90056 Ilene Circle,778,Baton Rouge,70826,United States,2018-08-17
+Center,Active,242215982-6,1275 Tomscot Hill,93,Kamloops,H9P,Canada,2018-07-27
+Crossing,Inactive,190821431-7,016 Utah Parkway,85,Corpus Christi,78405,United States,2018-07-23
+Point,Active,608122738-3,8126 Artisan Center,19240,Primero de Mayo,27944,Mexico,2018-07-13
+Trail,Inactive,387940105-5,653 Talmadge Alley,3852,Santa Rosa,67803,Mexico,2018-07-01
+Court,Inactive,922029080-4,21 Green Ridge Court,3,Johnson City,37605,United States,2018-06-28
+Road,Active,549774952-6,518 Bellgrove Circle,11888,Savannah,31410,United States,2018-06-24
+Lane,Active,737082077-7,97 Nobel Center,662,Vicente Guerrero,71122,Mexico,2018-06-17
+Court,Inactive,458436595-4,96425 Havey Court,8060,Washington,20546,United States,2018-05-30
+Junction,Active,042580945-5,881 Commercial Road,520,Fovissste,33980,Mexico,2018-05-25
+Court,Inactive,585695184-0,16 Jenifer Hill,42003,Guadalupe,72124,Mexico,2018-05-19
+Center,Active,063468586-4,0095 Union Drive,1729,Lindavista,29557,Mexico,2018-05-18
+Terrace,Inactive,070492571-0,6 Pawling Circle,0,San Antonio,52060,Mexico,2018-05-08
+Pass,Active,974525208-5,07 Lighthouse Bay Parkway,12,New Haven,6520,United States,2018-04-30
+Center,Active,771495232-6,11348 Mariners Cove Point,45,Danbury,6816,United States,2018-04-17
+Park,Active,860559358-X,47042 Swallow Center,1798,Hyattsville,20784,United States,2018-04-15
+Drive,Active,398224106-5,002 Crescent Oaks Crossing,8694,Springfield,62705,United States,2018-03-28
+Center,Active,430201139-4,6 Vidon Street,2126,Bouctouche,E4S,Canada,2018-03-23
+Drive,Active,674339858-6,11508 Susan Avenue,4,San Francisco,94159,United States,2018-03-19
+Hill,Active,545038952-3,7 Tennessee Drive,45,Okanagan,T0P,Canada,2018-03-08
+Road,Active,191916636-X,2735 Linden Circle,497,20 de Noviembre,30478,Mexico,2018-02-25
+Junction,Active,558891943-2,6 Macpherson Trail,5644,San Francisco,36441,Mexico,2018-02-19
+Road,Inactive,929001416-4,5 Jenna Junction,4297,Fort Worth,76115,United States,2018-02-17
+Pass,Active,396183847-X,97 Roxbury Circle,7,Birmingham,35244,United States,2018-02-16
+Crossing,Active,881006236-1,7954 Bonner Pass,13804,Mont-Joli,G5H,Canada,2018-02-05
+Terrace,Active,628883146-8,912 New Castle Pass,14365,San Francisco,94121,United States,2018-01-31
+Crossing,Active,462698348-0,2 Londonderry Plaza,6095,Pensacola,32575,United States,2018-01-29
+Parkway,Inactive,696609745-4,52 Troy Road,7,Concord,L4K,Canada,2018-01-29
+Plaza,Active,239733460-7,45889 Eastwood Street,7,Oshawa,L1K,Canada,2017-12-30
+Terrace,Inactive,185410112-9,8 Stone Corner Circle,23646,Indianapolis,46254,United States,2017-12-30
+Avenue,Inactive,655508023-X,1 Forest Dale Circle,994,El Paso,79934,United States,2017-12-29
+Point,Active,843990645-5,314 Melvin Plaza,28403,Miami,33196,United States,2017-11-19
+Trail,Active,845512492-X,0253 Maple Hill,711,Chester,N9A,Canada,2017-11-15
+Plaza,Active,676136806-5,7803 Kensington Lane,21589,Lac La Biche,E1W,Canada,2017-10-27
+Pass,Active,616074802-5,3413 Pine View Lane,5,Milwaukee,53225,United States,2017-10-13
+Circle,Active,110268163-6,487 Warbler Park,87389,Cincinnati,45254,United States,2017-10-12
+Crossing,Inactive,733115949-6,3 North Drive,18531,Boise,83732,United States,2017-09-27
+Avenue,Inactive,548088171-X,5 Meadow Vale Terrace,32433,Omaha,68105,United States,2017-09-27
+Park,Inactive,143337371-8,5342 Raven Street,854,Peace River,T8S,Canada,2017-09-19
+Junction,Active,878313314-3,4 Stuart Court,85,Garden Grove,92645,United States,2017-09-15
+Road,Active,281518811-2,740 Sachs Hill,35912,Bouctouche,E4S,Canada,2017-09-15
+Street,Active,146585092-9,988 6th Avenue,55054,Dorchester,E4K,Canada,2017-08-23
+Pass,Inactive,974344307-X,1 Heffernan Place,25,Solidaridad,88736,Mexico,2017-08-22
+Plaza,Active,740423212-0,38908 Miller Center,10287,Kansas City,64136,United States,2017-08-10
+Court,Active,399237796-2,49237 Oriole Plaza,2599,Labelle,N2L,Canada,2017-07-26
+Park,Inactive,642045829-3,2838 Carey Road,37,New Haven,6510,United States,2017-07-25
+Junction,Inactive,094848793-3,658 Graceland Trail,930,La Soledad,58118,Mexico,2017-07-01
+Trail,Inactive,046927437-9,06114 Katie Road,609,Luis Donaldo Colosio,26095,Mexico,2017-05-31
+Terrace,Inactive,957027983-4,4053 Jackson Circle,833,San Juan,30540,Mexico,2017-05-24
+Pass,Active,633139446-X,4 Manufacturers Lane,284,Washington,20337,United States,2017-05-17
+Trail,Inactive,516713320-3,67 Vernon Street,91704,Los Angeles,81426,Mexico,2017-05-13
+Way,Inactive,309368060-3,8 Delaware Alley,98307,Saint Louis,63136,United States,2017-04-11
+Drive,Active,333819106-5,9 Moulton Street,0,Keswick,L4P,Canada,2017-03-29
+Terrace,Inactive,384443063-6,12090 Prairieview Junction,2182,Willowdale,M3H,Canada,2017-03-24
+Street,Active,663514716-0,898 Sloan Way,7,Plessisville,G6L,Canada,2017-03-19
+Crossing,Inactive,807142256-8,5 Mendota Road,7,Baltimore,21281,United States,2017-03-15
+Avenue,Inactive,151853967-X,0177 Duke Junction,6053,Baltimore,21239,United States,2017-03-14
+Point,Inactive,115256312-2,01 Lakewood Gardens Park,865,Boise,83727,United States,2017-03-14
+Point,Active,128661375-2,24 Vahlen Avenue,89,Jacksonville,32209,United States,2017-02-15
+Junction,Inactive,118025695-6,638 Anderson Road,6,Orlando,32825,United States,2017-02-12
+Way,Inactive,915773534-4,86919 Bunting Circle,91,San Diego,92110,United States,2017-01-07
+Trail,Active,544984266-X,61 Valley Edge Trail,17,Emiliano Zapata,71836,Mexico,2016-12-28
+Plaza,Inactive,672258807-6,3334 Maple Way,3156,Miami,33175,United States,2016-11-18
+Plaza,Active,558083315-6,10013 Weeping Birch Way,5,Malartic,X0G,Canada,2016-10-27
